@@ -7,6 +7,9 @@ export default {
       return {
         title: "./tutku"
       }
+    },
+    methods: {
+      
     }
 }
 </script>
