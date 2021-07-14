@@ -12,7 +12,7 @@ export default {
 
 <template>
     <footer>
-        <p>{{year}} @ Tutku Uçan</p>
+        <p>Copyright © {{year}} Tutku Uçan</p>
     </footer>
 </template>
 

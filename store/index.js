@@ -1,9 +1,10 @@
 import Vuex from 'vuex'
 
 export const store = new Vuex.Store({
-    state: {
-        mode: 'dark'
-    },
+    state: () =>({
+        dark_mode: false,
+        name: "Tutku"
+    }),
     getters: {
 
     },

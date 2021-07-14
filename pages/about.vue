@@ -19,5 +19,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+@media only screen and (max-width: 880px) {
+    div {
+        padding: 20px;
+    }
+}
 </style>
