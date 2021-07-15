@@ -4,15 +4,21 @@
     font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 }
 $max-width: 860px;
+
 body {
     background-color: $c-background;
 }
 body , div , p , h1 , h2 , h3 ,h4 ,h5 , span , li , .icon {
-    transition: 250ms all;
-    -webkit-transition: 250ms all;
-    -moz-transition: 250ms all;
-    -ms-transition: 250ms all;
-    -o-transition: 250ms all;
+    transition: 350ms all;
+    -webkit-transition: 350ms all;
+    -moz-transition: 350ms all;
+    -ms-transition: 350ms all;
+    -o-transition: 350ms all;
+    color: $c-general;
+}
+svg {
+    height: auto;
+    fill: $c-general;
 }
 .container {
     max-width: $max-width;
@@ -25,7 +31,7 @@ body , div , p , h1 , h2 , h3 ,h4 ,h5 , span , li , .icon {
     max-width: $max-width;
 }
 .icon {
-    font-size: 20px;
+    font-size: 18px;
     color: $c-general;
 }
 .size-4 {
@@ -44,10 +50,44 @@ body , div , p , h1 , h2 , h3 ,h4 ,h5 , span , li , .icon {
     }
 
 }
-.icon-button {
-
+.icon-btn {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    color: $c-general;
+    &:hover {
+        .type-sun {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+        .type-moon {
+            animation: iconHover 250ms ;
+            -webkit-animation: iconHover 350ms ;
+        }
+    }
 }
 img {
     width: 100%;
     max-width: $max-width;
+}
+
+@keyframes iconHover {
+    50% {
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -o-transform: rotate(15deg);
+}
+    100% {
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+        -o-transform: rotate(-15deg);
+}
 }

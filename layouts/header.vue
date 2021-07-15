@@ -1,14 +1,19 @@
 <script>
-import { mapState } from 'vuex'
-
 export default {
     name: 'Header',
+    components: {
+        
+    },
+    methods: {
+        setColorMode(){
+            return this.$colorMode.preference = 'light'
+        }  
+    },
     computed: {
-        ...mapState([
-            'dark_mode',
-            'name'
-        ])
-    }
+        changeColorMode(){
+            return this.$colorMode.preference.system
+        }
+    },
 }
 </script>
 
@@ -30,11 +35,14 @@ export default {
         </nav>
         <ul>
             <li>
-                <button class="icon-button">
-                    {{name}}
-                    <fa v-if="dark_mode == false" icon="sun" class="icon" />
-                    <fa v-if="dark_mode == true" icon="moon" class="icon" />
+                {{ changeColorMode }}
+                <button @click="$colorMode.preference = 'system'" class="icon-btn" type="button">
+                    <fa icon="palette" class="icon" />
                 </button>
+                <ul>
+                    <li><button @click="$colorMode.preference = 'dark'" class="icon-btn"><fa icon="moon" class="icon type-moon" /></button></li>
+                    <li><button @click="$colorMode.preference = 'light'" class="icon-btn"><fa icon="sun" class="icon type-sun" /></button></li>
+                </ul>
             </li>
         </ul>
     </header>
@@ -42,6 +50,7 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '../assets/css/theme.scss';
 header {
     display: flex;
     justify-content: space-between;
@@ -59,6 +68,28 @@ header {
     }
     ul {
         list-style: none;
+        li {
+            ul {
+                visibility: hidden;
+                position: absolute;
+                margin-top: 0px;
+                transition: 250ms all;
+                border-radius: 0px;
+                padding-left: 0;
+                opacity: 0;
+                border-top: 1px solid $c-general;
+                li {
+                    padding: 5px 0px;
+                }
+            }
+            &:hover {
+                ul {
+                    visibility: visible;
+                    margin-top: 5px;
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
 @media only screen and (max-width: 880px) {

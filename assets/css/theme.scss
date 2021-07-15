@@ -1,8 +1,19 @@
-$c-modal: #a581e9;
-$c-background: #f3f3f3;
-$c-general: #000;
-
-body.dark {
-    $c-background: #121114;
-    $c-general: whitesmoke;
+:root {
+    --background: #f3f5f4;
+    --color: #000;
+    --modal-color: #a581e9;
 }
+
+.dark-mode {
+    --background: rgb(23, 23, 26);
+    --color: #f3f3f3;
+}
+
+.light-mode {
+    --background: #f3f5f4;
+    --color: #000;
+}
+
+$c-modal: var(--modal-color);
+$c-background: var(--background);
+$c-general: var(--color);
