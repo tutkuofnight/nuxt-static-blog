@@ -7,6 +7,13 @@ $max-width: 860px;
 body {
     background-color: $c-background;
 }
+body , div , p , h1 , h2 , h3 ,h4 ,h5 , span , li , .icon {
+    transition: 250ms all;
+    -webkit-transition: 250ms all;
+    -moz-transition: 250ms all;
+    -ms-transition: 250ms all;
+    -o-transition: 250ms all;
+}
 .container {
     max-width: $max-width;
     margin: 0 auto;
@@ -17,10 +24,18 @@ body {
     width: 100%;
     max-width: $max-width;
 }
+.icon {
+    font-size: 20px;
+    color: $c-general;
+}
+.size-4 {
+    font-size: 40px;
+}
 .link {
     text-decoration: none;
     padding: 2px 0px;
     color: $c-general;
+    border-bottom: 3px solid $c-background;
     &:hover {
         border-bottom: 3px solid $c-general;
     }
@@ -28,4 +43,11 @@ body {
         border-bottom: 3px solid $c-general;
     }
 
+}
+.icon-button {
+
+}
+img {
+    width: 100%;
+    max-width: $max-width;
 }

@@ -1,6 +1,14 @@
 <script>
+import { mapState } from 'vuex'
+
 export default {
-    name: 'Header'
+    name: 'Header',
+    computed: {
+        ...mapState([
+            'dark_mode',
+            'name'
+        ])
+    }
 }
 </script>
 
@@ -16,12 +24,18 @@ export default {
                     <nuxt-link to="/about" class="link">About</nuxt-link>
                 </li>
                 <li>
-                    <nuxt-link to="contact" class="link">Contact</nuxt-link>
+                    <nuxt-link to="contact" class="link">Find me</nuxt-link>
                 </li>
            </ul>
         </nav>
         <ul>
-            <li><button>dark</button></li>
+            <li>
+                <button class="icon-button">
+                    {{name}}
+                    <fa v-if="dark_mode == false" icon="sun" class="icon" />
+                    <fa v-if="dark_mode == true" icon="moon" class="icon" />
+                </button>
+            </li>
         </ul>
     </header>
 </template>
@@ -32,6 +46,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
     nav {
         width: 200px;
         ul {
@@ -45,9 +61,9 @@ header {
         list-style: none;
     }
 }
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 880px) {
     header {
-        margin: 0px 15px;
+        margin: 0px 20px;
     }
 }
 </style>

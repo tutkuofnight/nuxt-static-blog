@@ -1,9 +1,10 @@
 import Vuex from 'vuex'
 
-export default new Vuex.Store({
-    state: {
-        mode: 'dark'
-    },
+export const store = new Vuex.Store({
+    state: () =>({
+        dark_mode: false,
+        name: "Tutku"
+    }),
     getters: {
 
     },
