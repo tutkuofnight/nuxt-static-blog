@@ -11,6 +11,14 @@ Hello everyone. I'm Tutku Uçan, simply Tutku. In here i want to share my though
 - Vue.js / Nuxt.js
 - MongoDB
 
+### and
+
+## My Tools
+- Git
+- Visual Studio Code
+- Figma
+- Vercel
+
 <br>
 
 ![](https://wallpapercave.com/wp/wp5026434.jpg)
