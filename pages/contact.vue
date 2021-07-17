@@ -35,7 +35,7 @@ export default {
 </template>
 <style lang="scss" scoped>
 div {
-    margin-top: 40px;
+    margin-top: 60px;
     h2 {
         margin-bottom: 90px;
     }
@@ -53,6 +53,11 @@ div {
     }
     a {
         font-size: 20px;
+    }
+}
+@media only screen and (max-width: 870px) {
+    div {
+        margin-top: 110px;
     }
 }
 </style>
