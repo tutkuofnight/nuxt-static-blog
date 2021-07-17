@@ -35,6 +35,7 @@ export default {
 </template>
 <style lang="scss" scoped>
 div {
+    margin-top: 40px;
     h2 {
         margin-bottom: 90px;
     }
