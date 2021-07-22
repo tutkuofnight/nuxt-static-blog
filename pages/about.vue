@@ -1,5 +1,4 @@
 <script>
-import about_me from "../static/about-me.md"
 export default {
     name: 'About',
     head(){
@@ -7,15 +6,14 @@ export default {
             title: "./about-me",
         }
     },
-    computed: {
-        aboutMe(){
-            return about_me
-        }
+    async asyncData({$content}){
+        const article = await $content('context' , 'about').fetch()
+        return {article}
     }
 }
 </script>
 <template>
-    <div v-html="aboutMe"></div>
+    <nuxt-content :document="article"></nuxt-content>
 </template>
 
 <style lang="scss" scoped>

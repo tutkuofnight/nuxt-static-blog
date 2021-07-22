@@ -8,7 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Tutku Uçan blog.. ' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -56,7 +56,11 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    '@nuxtjs/content'
   ],
+  axios: {
+    proxy: true
+  },
   markdownit: {
     preset: 'default',
     linkify: true,
@@ -67,5 +71,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
 }
