@@ -1,6 +1,6 @@
-## About Me
+## Who am I
 
-Hello everyone. I'm Tutku Uçan, simply Tutku. In here i want to share my thoughts with you. Let's see what happens
+Hello everyone. I'm Tutku Uçan, I run developing web apps since 1 years. I have highschool graduate now and i improve myself about software , english and other things.
 
 <br>
 
