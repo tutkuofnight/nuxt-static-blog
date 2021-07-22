@@ -4,8 +4,23 @@
     font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
 }
 $max-width: 860px;
+
 body {
     background-color: $c-background;
+}
+body , div , p , h1 , h2 , h3 ,h4 ,h5 , span , li , .icon {
+    transition: 350ms all;
+    -webkit-transition: 350ms all;
+    -moz-transition: 350ms all;
+    -ms-transition: 350ms all;
+    -o-transition: 350ms all;
+    color: $c-general;
+    text-decoration-color: $c-border;
+    -moz-text-decoration-color: $c-border;
+}
+svg {
+    height: auto;
+    fill: $c-general;
 }
 .container {
     max-width: $max-width;
@@ -17,10 +32,18 @@ body {
     width: 100%;
     max-width: $max-width;
 }
+.icon {
+    font-size: 18px;
+    color: $c-general;
+}
+.size-4 {
+    font-size: 40px;
+}
 .link {
     text-decoration: none;
     padding: 2px 0px;
     color: $c-general;
+    border-bottom: 3px solid $c-background;
     &:hover {
         border-bottom: 3px solid $c-general;
     }
@@ -28,4 +51,62 @@ body {
         border-bottom: 3px solid $c-general;
     }
 
+}
+.article-link {
+    text-decoration: none;
+    text-decoration-color: $c-modal;
+    -moz-text-decoration-color: $c-modal;
+    &:hover {
+        h2 {
+            text-decoration: $c-border 4px underline;
+        }
+    }
+}
+.icon-btn {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    color: $c-general;
+    &:hover {
+        .type-sun {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+        .type-moon {
+            animation: iconHover 250ms ;
+            -webkit-animation: iconHover 350ms ;
+        }
+    }
+}
+img {
+    width: 100%;
+    max-width: $max-width;
+}
+.article-content {
+    h2 {
+        color: $c-general;
+    }
+    p {
+        color: gray;
+    }
+}
+@keyframes iconHover {
+    50% {
+        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+        -ms-transform: rotate(15deg);
+        -o-transform: rotate(15deg);
+}
+    100% {
+        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+        -o-transform: rotate(-15deg);
+}
 }
