@@ -56,7 +56,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
-    '@nuxtjs/content'
+    '@nuxt/content'
   ],
   axios: {
     proxy: true
