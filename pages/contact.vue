@@ -1,6 +1,5 @@
 <script>
 export default {
-    name: 'contact',
     head(){
         return {
             title: "./find-me"

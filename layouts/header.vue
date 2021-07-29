@@ -29,7 +29,7 @@ export default {
                     <nuxt-link to="/about" class="link">About</nuxt-link>
                 </li>
                 <li>
-                    <nuxt-link to="contact" class="link">Find me</nuxt-link>
+                    <nuxt-link to="/contact" class="link">Find me</nuxt-link>
                 </li>
            </ul>
         </nav>
