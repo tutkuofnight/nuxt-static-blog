@@ -56,7 +56,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit',
     '@nuxt/content'
   ],
   axios: {
