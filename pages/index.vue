@@ -1,21 +1,6 @@
 <script>
 import { format } from 'date-fns'
 export default {
-    components: {
-        
-    },
-    head(){
-      return {
-        title: "./tutku",
-        meta: [
-          {
-              hid: 'description',
-              name: 'description',
-              content: "Tutku Uçan blog"
-          }
-        ]
-      }
-    },
     async asyncData({$content}){
       const articles = await $content('blog').fetch()
       return { articles }
